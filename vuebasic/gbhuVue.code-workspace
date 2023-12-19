@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../代码"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "gbhuVue"
+	}
+}

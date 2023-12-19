@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script text="text/javascript" src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="demo">
+        <h1>hello,{{name}}</h1>
+        <a v-bind:href="name">点击跳转1</a>
+        <h1>{{__v_skip}}</h1>
+    </div>
+</body>
+<script text="text/javascript">
+    Vue.config.productionTip = false
+    // new Vue({
+    //     el:'#demo',//一般是 选择器 也可以原生dom
+    //     data:{ // data 是一个对象
+    //         name:"world",
+    //         school:{
+    //             name:"world"
+    //         }
+    //     }
+    // })
+    const vm= new Vue({
+        // data:{ // data 是一个对象
+        //     name:"world",
+        //     school:{
+        //         name:"world"
+        //     }
+        // }
+        data:function(){
+            return {
+                name:"world",
+                vm
+            }
+        }
+    })
+    vm.$mount("#demo")
+</script>
+</html>
