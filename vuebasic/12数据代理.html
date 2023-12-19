@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script text="text/javascript" src="./js/vue.js"></script>
+</head>
+
+<body>
+
+</body>
+<script type="text/javascript">
+    let obj = { x: 200 }
+    let obj2 = { y: 200 }
+    Object.defineProperty(obj2, 'x', {
+        get() {
+            return obj.x
+        },
+        set(value) {
+            obj.x = value
+        }
+    })
+    let vm = new Vue({
+        el: '#demo',//一般是 选择器 也可以原生dom
+        data: { // data 是一个对象
+            name: "world",
+            school: {
+                name: "world"
+            }
+        }
+    })
+</script>
+</html>

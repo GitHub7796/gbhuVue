@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script text="text/javascript" src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h2>学校名称：{{name}}</h2>
+        <button v-on:click="showInfo">点我提示信息</button>
+        <button @click="showInfo2(66)">点我提示信息2</button>
+        <button @click="showInfo3($event,66)">点我提示信3</button>
+    </div>
+</body>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#root',//一般是 选择器 也可以原生dom
+        data: { // data 是一个对象
+            name: "world",
+        },
+        methods: {
+            // showInfo(){ //默认传入事件对象
+            showInfo(event) {
+                console.log(this)//this是vm,如果是箭头函数，this是Window
+                console.log(event)//event是原生事件对象
+                alert("hello world")
+            },
+            showInfo2(number) {
+                alert("hello world" + number)
+            },
+            showInfo3(event, number) {
+                alert("hello world" + number)
+                console.log(event)
+            },
+        }
+    })
+</script>
+
+</html>
