@@ -44,7 +44,7 @@
 
         <!-- 2.stop：阻止事件冒泡（常用）； -->
         <div class="demo1" @click="showinfo">
-            <button @click.stop="showinfo">点我提示信息</button>
+            <a href="https://www.baidu.com/" @click.stop.prevent="showinfo">点我提示信息</a>
         </div>
 
         <!-- 3.once：事件只触发一次（常用）； -->
